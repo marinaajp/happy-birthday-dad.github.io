@@ -17,6 +17,9 @@ function figmaAssetResolver() {
 }
 
 export default defineConfig({
+  Replace export default defineConfig({ plugins: [ figmaAssetResolver(), react(), tailwindcss(), ], resolve: { ... }, assetsInclude: [...] })
+
+With export default defineConfig({ base: '/happy-birthday-dad.github.io/', // <-- ADD THIS LINE plugins: [ figmaAssetResolver(), react(), tailwindcss(), ], resolve: { ... }, assetsInclude: [...] })
   plugins: [
     figmaAssetResolver(),
     // The React and Tailwind plugins are both required for Make, even if
